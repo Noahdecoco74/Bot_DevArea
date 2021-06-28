@@ -116,7 +116,7 @@ public abstract class Command {
                     return null;
                 }
             } catch (Exception ignored) {
-                throw new Exception("Message is more than 2000 character !");
+                throw new Exception("Message is more than 2000 characters !");
             }
         } catch (Exception e) {
             e.printStackTrace();
