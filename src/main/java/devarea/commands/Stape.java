@@ -60,7 +60,7 @@ public abstract class Stape implements Cloneable {
 
     protected Stape stape(int nb) throws Exception {
         if (nb < 0 || nb >= stapes.length) {
-            throw new Exception("Le numero de la stape n'est pas associe !");
+            throw new Exception("Le numéro de la stape n'est pas associé !");
         }
         return stapes[nb];
     }
