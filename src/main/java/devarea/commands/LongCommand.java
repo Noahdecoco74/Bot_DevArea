@@ -24,7 +24,7 @@ public abstract class LongCommand extends Command {
         if (!message.getId().equals(this.lastMessage.getId())) {
             deletedEmbed((TextChannel) message.getChannel().block(), embed -> {
                 embed.setTitle("Error !");
-                embed.setDescription("Vous avez une commande en cour dans <#" + this.channel.getId().asString() + ">");
+                embed.setDescription("Vous avez une commande en cours dans <#" + this.channel.getId().asString() + ">");
                 embed.setColor(ColorsUsed.wrong);
             });
             return;
@@ -43,7 +43,7 @@ public abstract class LongCommand extends Command {
         if (!event.getMessage().getChannelId().equals(this.channel.getId())) {
             deletedEmbed((TextChannel) event.getMessage().getChannel().block(), embed -> {
                 embed.setTitle("Error !");
-                embed.setDescription("Vous avez une commande en cour dans <#" + this.channel.getId().asString() + ">");
+                embed.setDescription("Vous avez une commande en cours dans <#" + this.channel.getId().asString() + ">");
                 embed.setColor(ColorsUsed.wrong);
             });
             delete(false, event.getMessage());
@@ -59,7 +59,7 @@ public abstract class LongCommand extends Command {
     }
 
     protected void removeTrace() {
-        sendError("Vous avez annuler la commande !");
+        sendError("Vous avez annulé la commande !");
         delete(false, this.lastMessage);
         ended = true;
         endCommand();
