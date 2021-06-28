@@ -36,7 +36,7 @@ public class Mission extends LongCommand {
                 else {
                     setText(embed -> {
                         embed.setColor(ColorsUsed.same);
-                        embed.setTitle("Vous n'avez acutellement acune mission !");
+                        embed.setTitle("Vous n'avez actuellement aucune mission !");
                     });
                     return end;
                 }
@@ -56,7 +56,7 @@ public class Mission extends LongCommand {
                         }
                         setText(embed -> {
                             embed.setColor(ColorsUsed.just);
-                            embed.setTitle("Votre mission a bien été supprimé !");
+                            embed.setTitle("Votre mission a bien été supprimée !");
                         });
                         return end;
                     }
