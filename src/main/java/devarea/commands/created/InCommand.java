@@ -23,7 +23,7 @@ public class InCommand extends ShortCommand {
                     text += "<@" + entry.getKey().asString() + "> : " + names[names.length - 1] + "\n";
                 }
             } else
-                text = "Il n'y actuellement personnes avec des commandes en cour.";
+                text = "Il n'y a actuellement personnes avec des commandes en cours.";
             embedCreateSpec.setDescription(text);
             embedCreateSpec.setColor(ColorsUsed.same);
             embedCreateSpec.setTimestamp(Instant.now());
