@@ -51,7 +51,7 @@ public class MissionsManager {
             if (!MemberJoin.bindJoin.containsKey(event.getMember().get().getId()))
                 CommandManager.actualCommands.put(event.getMember().get().getId(), new CreateMission(event));
             else
-                Command.sendError((TextChannel) event.getChannel().block(), "Vous devez finir le questionnaire d'arrivé pour créer une commande !");
+                Command.sendError((TextChannel) event.getChannel().block(), "Vous devez finir le questionnaire d'arrivée pour créer une commande !");
         }
     }
 
