@@ -154,8 +154,8 @@ public class Meetup extends LongCommand {
                     a.getAndIncrement();
                 });
                 setText(spec -> {
-                    spec.setTitle("Meetup à delete...");
-                    spec.setDescription("Vous allez voir la liste de tout vos meetup s'afficher. Envoyer son numéro attribué pour le supprimer.");
+                    spec.setTitle("Meetup à supprimer...");
+                    spec.setDescription("Vous allez voir la liste de tous vos meetup s'afficher. Envoyer son numéro attribué pour le supprimer.");
                     spec.setFooter("Vous pouvez annuler | cancel", null);
                     spec.setColor(ColorsUsed.just);
                 });
