@@ -27,7 +27,7 @@ public class RoleReact extends LongCommand {
     public RoleReact(MessageCreateEvent message) {
         super(message);
         if (!message.getMember().get().getBasePermissions().block().contains(Permission.MANAGE_MESSAGES)) {
-            sendError("Vous n'avez pas les permissions d'utiliser cette commande !");
+            sendError("Vous n'avez pas les permissions pour utiliser cette commande !");
             new Thread(() -> {
                 try {
                     Thread.sleep(100);
@@ -78,7 +78,7 @@ public class RoleReact extends LongCommand {
                 protected boolean onCall(Message message) {
                     setText(embed -> {
                         embed.setTitle("Emoji");
-                        embed.setDescription("Réagis a se message avec l'emoji que tu souhaite !");
+                        embed.setDescription("Réagis à ce message avec l'emoji que tu souhaites !");
                         embed.setColor(ColorsUsed.just);
                     });
                     return next;
@@ -104,7 +104,7 @@ public class RoleReact extends LongCommand {
                 protected boolean onCall(Message message) {
                     setText(embed -> {
                         embed.setTitle("Le message.");
-                        embed.setDescription("Donnez-moi l'ID du message sur le quel vous voulez ajouter un roleReaction, ATTENTION vous devez vous trouver dans le channel du message !");
+                        embed.setDescription("Donnez-moi l'ID du message sur lequel vous voulez ajouter un roleReaction, ATTENTION vous devez vous trouver dans le channel du message !");
                         embed.setColor(ColorsUsed.same);
                     });
                     return next;
@@ -176,7 +176,7 @@ public class RoleReact extends LongCommand {
                             removeTable[number].delete();
                             setText(embed ->{
                                 embed.setTitle("Remove effectué !");
-                                embed.setDescription("Vous avez bien supprimer le rolereact !");
+                                embed.setDescription("Vous avez bien supprimé le rolereact !");
                                 embed.setColor(ColorsUsed.just);
                             });
                             return end;
