@@ -53,7 +53,7 @@ public class Edit extends LongCommand {
                     setMessage(msg -> {
                         msg.setEmbed(embed -> {
                             embed.setTitle("Message !");
-                            embed.setDescription("Donnez moi le contenu du message a remplacé !");
+                            embed.setDescription("Donnez moi le contenu du message à remplacer !");
                             embed.setColor(ColorsUsed.same);
                         });
                     });
@@ -194,7 +194,7 @@ public class Edit extends LongCommand {
                 public void onFirstCall(Consumer<? super MessageCreateSpec> deleteThisVariableAndSetYourOwnMessage) {
                     super.onFirstCall(msg -> msg.setEmbed(embed -> {
                         embed.setTitle("Quel message voulez-vous modifier ?");
-                        embed.setDescription("Donnez-moi l'id du message a modifier, ATTENTION ce message doit être dans le channel de cette commande !");
+                        embed.setDescription("Donnez-moi l'id du message à modifier, ATTENTION ce message doit être dans le channel de cette commande !");
                         embed.setColor(ColorsUsed.same);
                     }));
                 }
