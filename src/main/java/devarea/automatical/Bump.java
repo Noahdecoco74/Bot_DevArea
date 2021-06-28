@@ -21,7 +21,7 @@ public class Bump {
         channel = (TextChannel) Main.devarea.getChannelById(Main.idBump).block();
         message = Command.sendEmbed(channel, embedCreateSpec -> {
             embedCreateSpec.setColor(ColorsUsed.wrong);
-            embedCreateSpec.setDescription("Le bot viens de s'initialiser, utilisez la commande `!d bump`, pour lancer le compte à rebours.");
+            embedCreateSpec.setDescription("Le bot viens de s'initialiser, utilisez la commande `!d bump` pour lancer le compte à rebours.");
         }, true);
         new Thread(() -> {
             try {
