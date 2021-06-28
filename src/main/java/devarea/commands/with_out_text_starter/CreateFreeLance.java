@@ -51,7 +51,7 @@ public class CreateFreeLance extends LongCommand {
             protected boolean onCall(Message message) {
                 addYesNoEmoji();
                 setText(embed -> {
-                    embed.setTitle("Voulez vous poster votre présentation ?");
+                    embed.setTitle("Voulez-vous poster votre présentation ?");
                     embed.setDescription("La gestion par la suite de l'offre est en développement, si vous voulez la retirer par la suite demmandez à un membre du staff !");
                     embed.setColor(ColorsUsed.just);
                     embed.setFooter("Vous pouvez annuler | cancel", null);
@@ -82,7 +82,7 @@ public class CreateFreeLance extends LongCommand {
                 addYesNoEmoji();
                 setText(embed -> {
                     embed.setTitle("Liens");
-                    embed.setDescription("Voulez vous conserver ces liens. Si vous voulez les refaires choississez non !");
+                    embed.setDescription("Voulez-vous conserver ces liens. Si vous voulez les refaires choississez non !");
                     embed.setColor(ColorsUsed.same);
                     embed.setFooter("Vous pouvez annuler | cancel", null);
                 });
@@ -247,7 +247,7 @@ public class CreateFreeLance extends LongCommand {
             protected boolean onCall(Message message) {
                 setText(embed -> {
                     embed.setTitle("L'offre");
-                    embed.setDescription("Description de l'offre, essayez de donner de nombreux détails, attention le Prix, et le Temps de retour de l'offre vous seront demmandé après.");
+                    embed.setDescription("Description de l'offre, essayez de donner de nombreux détails, attention le Prix, et le Temps de retour de l'offre vous seront demmandés après.");
                     embed.setFooter("Vous pouvez annuler | cancel", null);
                     embed.setColor(ColorsUsed.same);
                 });
@@ -272,8 +272,8 @@ public class CreateFreeLance extends LongCommand {
                 actualFied = new FreeLance.FieldSeria();
                 removeAllEmoji();
                 setText(embed -> {
-                    embed.setTitle("Donnez moi le titre de la compétence/offre.");
-                    embed.setDescription("Titre rapide, vous pourrez faire une présentation plus en détails par la suite");
+                    embed.setTitle("Donnez-moi le titre de la compétence/offre.");
+                    embed.setDescription("Titre rapide, vous pourrez faire une présentation plus en détail par la suite");
                     embed.setFooter("Vous pouvez annuler | cancel", null);
                     embed.setColor(ColorsUsed.same);
                 });
@@ -299,18 +299,18 @@ public class CreateFreeLance extends LongCommand {
                     embed.setTitle(freeLance.getFreeLanceName());
                     embed.setDescription(freeLance.getDescription());
                     if (freeLance.getFieldNumber() == 0)
-                        embed.addField("Titre de la compétence/titre de l'offre. Par exemple: Bot discordJS 25 commandes personnalisées", "Les informations sur votre offre globale,\n\n(toutes les informations ci-dessous vous seront demandé)\n prix : le prix approximatif de l'offre\n temps de réalisation: le temps de rendu de l'offre", false);
+                        embed.addField("Titre de la compétence/titre de l'offre. Par exemple: Bot discordJS 25 commandes personnalisées", "Les informations sur votre offre globale,\n\n(toutes les informations ci-dessous vous seront demandées)\n prix : le prix approximatif de l'offre\n temps de réalisation: le temps de rendu de l'offre", false);
                     else
                         for (int i = 0; i < freeLance.getFieldNumber(); i++) {
                             embed.addField(freeLance.getField(i).getTitle(), freeLance.getField(i).getValue(), freeLance.getField(i).getInline());
                         }
-                    embed.addField("Les offres", "Vous pouvez ajouter le nombre d'offre que vous souhaitez", false);
-                    embed.addField("Liens:", "Vous pouvez insérer ici tout vos liens vers linkin, portfolio, ou autre...", false);
+                    embed.addField("Les offres", "Vous pouvez ajouter le nombre d'offres que vous souhaitez", false);
+                    embed.addField("Liens:", "Vous pouvez insérer ici tous vos liens vers linkin, portfolio, ou autre...", false);
                     embed.setColor(ColorsUsed.same);
                 })).subscribe();
                 addYesNoEmoji();
                 setText(embed -> {
-                    embed.setTitle("Voulez vous ajouter une compétence/offre ?");
+                    embed.setTitle("Voulez-vous ajouter une compétence/offre ?");
                     embed.setDescription("Vous pouvez ajouter une offre/compétence avec un titre, description, prix, date de retour.");
                     embed.setFooter("Vous pouvez annuler | cancel", null);
                     embed.setColor(ColorsUsed.same);
@@ -349,9 +349,9 @@ public class CreateFreeLance extends LongCommand {
                     messageAtEdit.edit(msg -> msg.setEmbed(embed -> {
                         embed.setTitle(freeLance.getFreeLanceName());
                         embed.setDescription(freeLance.getDescription());
-                        embed.addField("Titre de la compétence/titre de l'offre. Par exemple: Bot discordJS 25 commandes personnalisées", "Les informations sur votre offre globale,\n\n(toutes les informations ci-dessous vous seront demandé)\n prix : le prix approximatif de l'offre\n temps de réalisation: le temps de rendu de l'offre", false);
-                        embed.addField("Les offres", "Vous pouvez ajouter le nombre d'offre que vous souhaitez", false);
-                        embed.addField("Liens:", "Vous pouvez insérer ici tout vos liens vers linkin, portfolio, ou autre...", false);
+                        embed.addField("Titre de la compétence/titre de l'offre. Par exemple: Bot discordJS 25 commandes personnalisées", "Les informations sur votre offre globale,\n\n(toutes les informations ci-dessous vous seront demandées)\n prix : le prix approximatif de l'offre\n temps de réalisation: le temps de rendu de l'offre", false);
+                        embed.addField("Les offres", "Vous pouvez ajouter le nombre d'offres que vous souhaitez", false);
+                        embed.addField("Liens:", "Vous pouvez insérer ici tous vos liens vers linkin, portfolio, ou autre...", false);
                         embed.setColor(ColorsUsed.same);
                     })).subscribe();
                     return callStape(0);
@@ -366,7 +366,7 @@ public class CreateFreeLance extends LongCommand {
                 removeAllEmoji();
                 setText(embed -> {
                     embed.setTitle("Nom Prenom");
-                    embed.setDescription("Donnez moi le `Nom Prenom` que vous voulez afficher sur la présentation. (Il est conseiller de ne pas donner de pseudo)");
+                    embed.setDescription("Donnez-moi le `Nom Prenom` que vous voulez afficher sur la présentation. (Il est conseillé de ne pas donner de pseudo)");
                     embed.setColor(ColorsUsed.just);
                     embed.setFooter("Vous pouvez annuler | cancel", null);
                 });
@@ -380,10 +380,10 @@ public class CreateFreeLance extends LongCommand {
                     freeLance.setFreeLanceName(content);
                     messageAtEdit.edit(msg -> msg.setEmbed(embed -> {
                         embed.setTitle(freeLance.getFreeLanceName());
-                        embed.setDescription("Depuis comment de temps etes vous en FreeLance, vos dîplomes, etes vous en auto-entreprise sous contract ? Et toutes informations générales importantes...");
-                        embed.addField("Titre de la compétence/titre de l'offre. Par exemple: Bot discordJS 25 commandes personnalisées", "Les informations sur votre offre globale,\n\n(toutes les informations ci-dessous vous seront demandé)\n prix : le prix approximatif de l'offre\n temps de réalisation: le temps de rendu de l'offre", false);
-                        embed.addField("Les offres", "Vous pouvez ajouter le nombre d'offre que vous souhaitez", false);
-                        embed.addField("Liens:", "Vous pouvez insérer ici tout vos liens vers linkin, portfolio, ou autre...", false);
+                        embed.setDescription("Depuis combien de temps êtes vous en FreeLance, vos dîplomes, êtes vous en auto-entreprise sous contract ? Et toutes informations générales importantes...");
+                        embed.addField("Titre de la compétence/titre de l'offre. Par exemple: Bot discordJS 25 commandes personnalisées", "Les informations sur votre offre globale,\n\n(toutes les informations ci-dessous vous seront demandées)\n prix : le prix approximatif de l'offre\n temps de réalisation: le temps de rendu de l'offre", false);
+                        embed.addField("Les offres", "Vous pouvez ajouter le nombre d'offres que vous souhaitez", false);
+                        embed.addField("Liens:", "Vous pouvez insérer ici tous vos liens vers linkin, portfolio, ou autre...", false);
                         embed.setColor(ColorsUsed.same);
                     })).block();
                     return callStape(0);
@@ -405,10 +405,10 @@ public class CreateFreeLance extends LongCommand {
                 messageAtEdit = channel.createMessage(msg -> {
                     msg.setEmbed(embed -> {
                         embed.setTitle("Nom Prénom");
-                        embed.setDescription("Depuis comment de temps etes vous en FreeLance, vos dîplomes, etes vous en auto-entreprise sous contract ? Et toutes informations générales importantes...");
-                        embed.addField("Titre de la compétence/titre de l'offre. Par exemple: Bot discordJS 25 commandes personnalisées", "Les informations sur votre offre globale,\n\n(toutes les informations ci-dessous vous seront demandé)\n prix : le prix approximatif de l'offre\n temps de réalisation: le temps de rendu de l'offre", false);
-                        embed.addField("Les offres", "Vous pouvez ajouter le nombre d'offre que vous souhaitez", false);
-                        embed.addField("Liens:", "Vous pouvez insérer ici tout vos liens vers linkin, portfolio, ou autre...", false);
+                        embed.setDescription("Depuis combien de temps êtes vous en FreeLance, vos dîplomes, êtes vous en auto-entreprise sous contract ? Et toutes informations générales importantes...");
+                        embed.addField("Titre de la compétence/titre de l'offre. Par exemple: Bot discordJS 25 commandes personnalisées", "Les informations sur votre offre globale,\n\n(toutes les informations ci-dessous vous seront demandées)\n prix : le prix approximatif de l'offre\n temps de réalisation: le temps de rendu de l'offre", false);
+                        embed.addField("Les offres", "Vous pouvez ajouter le nombre d'offres que vous souhaitez", false);
+                        embed.addField("Liens:", "Vous pouvez insérer ici tous vos liens vers linkin, portfolio, ou autre...", false);
                         embed.setColor(ColorsUsed.same);
                     });
                 }).block();
@@ -468,7 +468,7 @@ public class CreateFreeLance extends LongCommand {
                 embed.addField(freeLance.getField(i).getTitle(), freeLance.getField(i).getValue(), freeLance.getField(i).getInline());
             }
             embed.addField(actualFied.getTitle(), actualFied.getValue(), actualFied.getInline());
-            embed.addField("Liens:", "Vous pouvez insérer ici tout vos liens vers linkin, portfolio, ou autre...", false);
+            embed.addField("Liens:", "Vous pouvez insérer ici tous vos liens vers linkin, portfolio, ou autre...", false);
             embed.setColor(ColorsUsed.same);
         })).block();
     }
