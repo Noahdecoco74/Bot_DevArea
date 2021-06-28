@@ -83,8 +83,8 @@ public class Joining {
 
             if (this.status == 0) {
                 this.message.edit(msg -> msg.setEmbed(embed -> {
-                    embed.setTitle("Pour quoi es-tu là ?");
-                    embed.setDescription("    - Tu es développeur ou tu es ici pour apprendre à développer -> <:ayy:" + Main.idYes.getId().asString() + ">\n    - Tu es là car tu as besoin de développeurs, tu as une mission à donner -> <:ayy:" + Main.idNo.getId().asString() + ">");
+                    embed.setTitle("Pourquoi es-tu là ?");
+                    embed.setDescription("    - Es-tu développeur ou es-tu ici pour apprendre à développer -> <:ayy:" + Main.idYes.getId().asString() + ">\n    - Es-tu là car tu as besoin de développeurs, tu as une mission à donner -> <:ayy:" + Main.idNo.getId().asString() + ">");
                     embed.setColor(ColorsUsed.just);
                 })).subscribe();
                 this.message.addReaction(this.no).subscribe();
@@ -159,7 +159,7 @@ public class Joining {
                     }
 
                     ((TextChannel) Main.devarea.getChannelById(Main.idWelcomChannel).block()).createMessage(msg -> msg.setEmbed(embed -> {
-                        embed.setTitle("Salut ! " + this.member.getTag() + ", bienvenue sur **Dev'Area**, amuse toi bien !");
+                        embed.setTitle("Salut ! " + this.member.getTag() + ", bienvenue sur **Dev'Area**, amuse-toi bien !");
                         embed.setDescription("Membre n°" + Main.devarea.getMembers().buffer().blockLast().size());
                         embed.setImage(this.member.getAvatarUrl());
                         embed.setColor(ColorsUsed.just);
