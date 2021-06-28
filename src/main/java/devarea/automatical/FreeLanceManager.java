@@ -38,7 +38,7 @@ public class FreeLanceManager {
         messsage = Command.sendEmbed((TextChannel) Main.devarea.getChannelById(Main.idFreeLance).block(), embedCreateSpec -> {
             embedCreateSpec.setColor(ColorsUsed.same);
             embedCreateSpec.setTitle("Proposez vos services !");
-            embedCreateSpec.setDescription("Cliquez sur <:ayy:" + Main.idYes.getId().asString() + "> pour créer une page de compétances !");
+            embedCreateSpec.setDescription("Cliquez sur <:ayy:" + Main.idYes.getId().asString() + "> pour créer une page de compétences !");
             embedCreateSpec.setFooter("Cette fonctionnalité est en avant première, si vous voyez le moindre bug, veuillez nous alerter !", null);
         }, true);
         messsage.addReaction(ReactionEmoji.custom(Main.idYes)).subscribe();
@@ -52,7 +52,7 @@ public class FreeLanceManager {
             if (!MemberJoin.bindJoin.containsKey(event.getMember().get().getId()))
                 CommandManager.actualCommands.put(event.getMember().get().getId(), new CreateFreeLance(event));
             else
-                Command.sendError((TextChannel) event.getChannel().block(), "Vous devez finir le questionnaire d'arrivé pour créer une commande !");
+                Command.sendError((TextChannel) event.getChannel().block(), "Vous devez finir le questionnaire d'arrivée pour créer une commande !");
         }
     }
 
