@@ -15,7 +15,7 @@ public class Update extends ShortCommand {
             Stats.update();
             sendEmbed(embed -> {
                 embed.setTitle("Update !");
-                embed.setDescription("Les stats ont été update en " + (System.currentTimeMillis() - ms) + "ms.");
+                embed.setDescription("Les stats ont été mises à jour en " + (System.currentTimeMillis() - ms) + "ms.");
                 embed.setColor(ColorsUsed.just);
             }, false);
         });
