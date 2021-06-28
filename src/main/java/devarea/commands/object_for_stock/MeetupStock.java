@@ -89,7 +89,7 @@ public class MeetupStock implements Serializable {
 
     public Consumer<? super EmbedCreateSpec> getEmbedVerif() {
         return (Consumer<EmbedCreateSpec>) embedCreateSpec -> {
-            embedCreateSpec.setAuthor("Voici comment sera afficher le meetup ! Vous pouvez comfirmer yes ou annuler cancel le meetup.", Main.client.getSelf().block().getAvatarUrl(), Main.client.getSelf().block().getAvatarUrl());
+            embedCreateSpec.setAuthor("Voici comment sera affiché le meetup ! Vous pouvez comfirmer yes ou annuler cancel le meetup.", Main.client.getSelf().block().getAvatarUrl(), Main.client.getSelf().block().getAvatarUrl());
             if (this.name != null) {
                 embedCreateSpec.setTitle(this.name);
             }
