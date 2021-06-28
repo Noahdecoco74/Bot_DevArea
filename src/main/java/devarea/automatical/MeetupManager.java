@@ -33,7 +33,7 @@ public class MeetupManager {
                 System.out.println("Read meetup successfully !");
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
-                System.out.println("Data are loosed !!!!");
+                System.out.println("Data are lost !!!!");
             }
         }
         new Thread(() -> {
@@ -45,7 +45,7 @@ public class MeetupManager {
                         if (!meetupStock.getAlreayMake()) {
                             if (meetupStock.getDate().after(date)) {
                                 Command.send((TextChannel) message.getChannel().block(), msg -> {
-                                    msg.setContent("Un meetup a commencer avec sujet : " + meetupStock.getDescription() + ".\n<@&" + Main.idPingMeetup + ">");
+                                    msg.setContent("Un meetup a commencé avec sujet : " + meetupStock.getDescription() + ".\n<@&" + Main.idPingMeetup + ">");
                                 }, false);
                                 Main.devarea.createVoiceChannel(voiceChannelCreateSpec -> {
                                     voiceChannelCreateSpec.setParentId(Main.idCategoryGeneral);
